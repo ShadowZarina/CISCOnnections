@@ -5,10 +5,11 @@ Access the website live through [CISCOnnections](link)!
 
 ## Tech Stack
 This website utilizes the following languages and frameworks:
+- D3.js force-directed
 
 The project maximizes the following concepts:
 - sentence-transformers (all-MiniLM-L6-v2)
 - NetworkX -> JSON
 - Cosine + temporal decay
-- D3.js force-directed
-- Static (Vercel)
+
+The website will be hosted on Vercel.
