@@ -29,4 +29,29 @@ This website utilizes the following languages and frameworks:
 The project maximizes the following concepts:
 - Cosine + temporal decay
 
-The website will be hosted on Vercel.
+## RECOMMENDED
+Language: TypeScript
+Framework: React
+Build tool: Vite
+Styling: CSS Modules
+Canvas: React Flow for connected constellations, or React Konva for a freeform visual workspace
+Icons: Lucide React
+State management: React state initially; Zustand when needed
+
+### 1. Recommended frontend stack
+
+React + TypeScript
+Core
+Build reusable components for galaxies, planets, stars, notes, toolbars, and sidebars. TypeScript helps catch errors as the project grows.
+
+Vite
+A fast development server and build tool for your React application. It keeps the initial setup simple.
+
+CSS Modules or Tailwind CSS
+Style your space-themed interface, including responsive layouts, colors, typography, shadows, and planet designs. Choose one initially rather than combining both.
+
+React Flow (@xyflow/react)
+Useful for creating connected nodes, draggable objects, and visual relationships. It can provide the foundation for linking stars, planets, and notes.
+
+Lucide React
+Clean, consistent icons for actions such as adding planets, editing stars, deleting notes, zooming, and opening settings.
