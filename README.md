@@ -55,3 +55,13 @@ Useful for creating connected nodes, draggable objects, and visual relationships
 
 Lucide React
 Clean, consistent icons for actions such as adding planets, editing stars, deleting notes, zooming, and opening settings.
+
+
+### Technology	Purpose	Priority
+HTML5	Structure and semantic elements	Essential
+TypeScript	Types for planets, stars, notes, and connections	Essential
+CSS	Visual styling and responsive layouts	Essential
+React Router	Navigation between pages and galaxies	Optional initially
+Zustand	Managing selected objects, editing, and canvas state	Useful as complexity grows
+IndexedDB	Saving larger amounts of workspace data locally	Later
+Vitest + React Testing Library	Testing components and interactions	Later
