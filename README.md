@@ -8,14 +8,13 @@ CISCOnnections is the perfect tool for visual and writing-based planners who lov
 
 ✦ Explore the Features of CISCOnnections!
 - 🌌 Create Your Own Galaxies — Organize each chart into a unique galaxy of ideas.
-- 🪐 Categorize with Planets — Sort information using planets of different colors and shapes.
 - ⭐ Bring Stars to Life — List names and entries as stars in your galaxy.
 - ☄️ Add Notes and Descriptions — Expand your ideas with informative moons and comets.
 - ✨ Connect Your Constellations — Link related entries to visualize connections and relationships.
 - 🎨 Personalize Your Universe — Mix visual elements and written details to create your ideal planner.
 
 /* each repository/container is a galaxy
-categories are planets 
+categories are planets (REMOVE PLANETS, use stars only)
 notes are moons or i can just make them appear on click
 all nodes are stars
 connect stars to form constellations */
