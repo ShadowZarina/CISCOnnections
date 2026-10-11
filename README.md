@@ -13,10 +13,10 @@ CISCOnnections is the perfect tool for visual and writing-based planners who lov
 - ✨ Connect Your Constellations — Link related entries to visualize connections and relationships.
 - 🎨 Personalize Your Universe — Mix visual elements and written details to create your ideal planner.
 
-/* each repository/container is a galaxy
-categories are planets (REMOVE PLANETS, use stars only)
-notes are moons or i can just make them appear on click
-all nodes are stars
+/* each repository/container is a galaxy<br>
+categories are planets (REMOVE PLANETS, use stars only)<br>
+notes are moons or i can just make them appear on click<br>
+all nodes are stars<br>
 connect stars to form constellations */
 
 ## Tech Stack
@@ -29,38 +29,38 @@ The project maximizes the following concepts:
 - Cosine + temporal decay
 
 ## RECOMMENDED
-Language: TypeScript
-Framework: React
-Build tool: Vite
-Styling: CSS Modules
-Canvas: React Flow for connected constellations, or React Konva for a freeform visual workspace
-Icons: Lucide React
-State management: React state initially; Zustand when needed
+- Language: ReactJS
+- Framework: React
+- Build tool: Vite
+- Styling: CSS Modules
+- Canvas: React Flow for connected constellations, or React Konva for a freeform visual workspace
+- Icons: Lucide React
+- State management: React state initially; Zustand when needed
 
 ### 1. Recommended frontend stack
 
-React + TypeScript
-Core
-Build reusable components for galaxies, planets, stars, notes, toolbars, and sidebars. TypeScript helps catch errors as the project grows.
+React
+- Core
+- Build reusable components for galaxies, planets, stars, notes, toolbars, and sidebars. TypeScript helps catch errors as the project grows.
 
 Vite
-A fast development server and build tool for your React application. It keeps the initial setup simple.
+- A fast development server and build tool for your React application. It keeps the initial setup simple.
 
 CSS Modules or Tailwind CSS
-Style your space-themed interface, including responsive layouts, colors, typography, shadows, and planet designs. Choose one initially rather than combining both.
+- Style your space-themed interface, including responsive layouts, colors, typography, shadows, and planet designs. Choose one initially rather than combining both.
 
 React Flow (@xyflow/react)
-Useful for creating connected nodes, draggable objects, and visual relationships. It can provide the foundation for linking stars, planets, and notes.
+- Useful for creating connected nodes, draggable objects, and visual relationships. It can provide the foundation for linking stars, planets, and notes.
 
 Lucide React
-Clean, consistent icons for actions such as adding planets, editing stars, deleting notes, zooming, and opening settings.
+- Clean, consistent icons for actions such as adding planets, editing stars, deleting notes, zooming, and opening settings.
 
 
 ### Technology	Purpose	Priority
-HTML5	Structure and semantic elements	Essential
-TypeScript	Types for planets, stars, notes, and connections	Essential
-CSS	Visual styling and responsive layouts	Essential
-React Router	Navigation between pages and galaxies	Optional initially
-Zustand	Managing selected objects, editing, and canvas state	Useful as complexity grows
-IndexedDB	Saving larger amounts of workspace data locally	Later
-Vitest + React Testing Library	Testing components and interactions	Later
+- HTML5	<br>Structure and semantic elements	Essential
+- TypeScript	<br>Types for planets, stars, notes, and connections	Essential
+- CSS	<br>Visual styling and responsive layouts	Essential
+- React <br>Router	Navigation between pages and galaxies	Optional initially
+- Zustand	<br>Managing selected objects, editing, and canvas state	Useful as complexity grows
+- IndexedDB	<br>Saving larger amounts of workspace data locally	Later
+- Vitest + React <br>Testing Library	Testing components and interactions	Later
