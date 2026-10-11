@@ -21,21 +21,16 @@ connect stars to form constellations */
 
 ## Tech Stack
 This website utilizes the following languages and frameworks:
-- sentence-transformers (all-MiniLM-L6-v2)
-- NetworkX -> JSON
-- D3.js force-directed
-
-The project maximizes the following concepts:
-- Cosine + temporal decay
-
-## RECOMMENDED
 - Language: ReactJS
 - Framework: React
-- Build tool: Vite
+- Build tool: Bun
 - Styling: CSS Modules
 - Canvas: React Flow for connected constellations, or React Konva for a freeform visual workspace
 - Icons: Lucide React
 - State management: React state initially; Zustand when needed
+
+The project maximizes the following concepts:
+- Cosine + temporal decay
 
 ### 1. Recommended frontend stack
 
@@ -43,7 +38,7 @@ React
 - Core
 - Build reusable components for galaxies, planets, stars, notes, toolbars, and sidebars. TypeScript helps catch errors as the project grows.
 
-Vite
+Bun
 - A fast development server and build tool for your React application. It keeps the initial setup simple.
 
 CSS Modules or Tailwind CSS
@@ -64,3 +59,5 @@ Lucide React
 - Zustand	<br>Managing selected objects, editing, and canvas state	Useful as complexity grows
 - IndexedDB	<br>Saving larger amounts of workspace data locally	Later
 - Vitest + React <br>Testing Library	Testing components and interactions	Later
+
+## How to Run the Website
