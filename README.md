@@ -19,6 +19,7 @@ notes are moons or i can just make them appear on click<br>
 all nodes are stars<br>
 connect stars to form constellations */
 
+
 ## Tech Stack
 This website utilizes the following languages and frameworks:
 - Language: ReactJS
