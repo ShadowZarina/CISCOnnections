@@ -1,0 +1,22 @@
+{
+  "name": "cisconnections-canvas-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot scripts/dev.js",
+    "start": "bun --hot scripts/dev.js",
+    "build": "bun scripts/build.js",
+    "test": "bun test src/features/canvas-prototype"
+  },
+  "dependencies": {
+    "@xyflow/react": "^12.9.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "bun-plugin-tailwind": "^0.1.2",
+    "tailwindcss": "^4.1.0"
+  },
+  "engines": { "bun": ">=1.3.0" }
+}

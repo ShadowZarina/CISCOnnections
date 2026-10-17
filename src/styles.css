@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css" layer(base);
+
+/* Neutral dark placeholders. The final palette remains a design decision. */
+:root {
+  color-scheme: dark;
+  --surface-canvas: #101010;
+  --surface-panel: #1d1d1d;
+  --surface-control: #282828;
+  --surface-hover: #363636;
+  --text-primary: #f0f0f0;
+  --text-muted: #bcbcbc;
+  --border: #767676;
+  --link: #bcbcbc;
+  --link-selected: #ffffff;
+}
+html, body, #root { width: 100%; height: 100%; }
+body { margin: 0; color: var(--text-primary); background: var(--surface-canvas); font-family: system-ui, sans-serif; }
+button, input { font: inherit; color: inherit; }
+button { border: 1px solid var(--border); border-radius: 3px; padding: 3px 8px; background: var(--surface-control); cursor: pointer; }
+button:hover { background: var(--surface-hover); }
+button:focus-visible, input:focus-visible, .canvas:focus-visible { outline: 2px solid var(--text-primary); outline-offset: 3px; }
+.prototype-shell { height: 100dvh; display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; overflow: hidden; }
+.prototype-shell > header, .prototype-shell > footer, .prototype-shell > [aria-label="Canvas information"] { border-color: var(--border); background: var(--surface-panel); }
+.canvas { position: relative; min-width: 0; min-height: 0; background: var(--surface-canvas); }
+.canvas .react-flow {
+  --xy-background-color: var(--surface-canvas);
+  --xy-controls-button-background-color: var(--surface-control);
+  --xy-controls-button-background-color-hover: var(--surface-hover);
+  --xy-controls-button-color: var(--text-primary);
+  --xy-controls-button-color-hover: var(--text-primary);
+  --xy-controls-button-border-color: var(--border);
+  --xy-node-color: var(--text-primary);
+  background: var(--surface-canvas);
+  color: var(--text-primary);
+}
+.star-node { box-sizing: border-box; width: 100%; height: 100%; border: 1px solid var(--border); background: var(--surface-panel); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+.star-node.is-selected { outline: 2px solid var(--text-primary); outline-offset: 2px; }
+.star-node.is-source { border-style: dashed; }
+.star-action { display: flex; align-items: center; min-height: 24px; font-size: 11px; color: var(--text-muted); }
+.star-node button { font-size: 12px; }
+.star-node .star-name { border: 0; padding: 0 4px; font-size: 14px; background: transparent; }
+.react-flow__handle { opacity: 0; pointer-events: none; }
+/* Non-interactive, zero-size anchors give both handle types the exact same center. */
+.react-flow__handle.star-center-handle {
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  width: 0;
+  height: 0;
+  min-width: 0;
+  min-height: 0;
+  border: 0;
+  transform: none;
+}
+/* Keep edge geometry visible even when CSS resets affect SVG elements. */
+.canvas .react-flow__edges svg { overflow: visible; }
+.connection-edge { color: var(--link); }
+.connection-edge.is-selected { color: var(--link-selected); }
+.edge-delete { width: 28px; height: 28px; padding: 0; opacity: 0; pointer-events: none; }
+.connection-edge:hover .edge-delete, .connection-edge.is-selected .edge-delete,
+.edge-delete:focus-visible { opacity: 1; pointer-events: all; }
+.edge-text { font-size: 12px; fill: currentColor; paint-order: stroke; stroke: var(--surface-canvas); stroke-width: 4px; pointer-events: none; }
+.edge-card { width: min(300px, calc(100vw - 32px)); max-height: calc(100dvh - 180px); overflow-y: auto; border: 1px solid var(--border); background: var(--surface-panel); color: var(--text-primary); padding: 12px; font-size: 13px; pointer-events: auto; }
+.edge-card > p { margin-bottom: 12px; overflow-wrap: anywhere; }
+.edge-card label { display: block; margin-bottom: 4px; }
+.edge-card .field-label { margin-top: 12px; }
+.edge-card .field-hint { margin-top: 4px; font-size: 12px; color: var(--text-muted); }
+.edge-card input { width: 100%; border: 1px solid var(--border); padding: 6px; background: var(--surface-canvas); }
+.edge-card input::placeholder { color: var(--text-muted); }
+.edge-menu { position: absolute; z-index: 40; border: 1px solid var(--border); background: var(--surface-panel); padding: 4px; }
+.connection-preview { position: absolute; z-index: 0; top: 0; left: 0; width: 1px; height: 1px; overflow: visible; pointer-events: none; }
+.connection-preview line { stroke: var(--link); stroke-width: 2px; stroke-dasharray: 5 4; }
