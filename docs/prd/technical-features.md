@@ -1,12 +1,11 @@
-# CISCOnnections technical features
+# Zenith technical features
 
 ## Local development stack
 
 | Tool | Use |
 | --- | --- |
-| React + TypeScript | Builds the app and keeps data shapes clear. |
-| Vite | Runs the app locally during development and builds the web files later. |
-| Bun | Installs packages and runs project scripts. |
+| React + JavaScript/JSX | Builds the app and canvas controls. |
+| Bun | Installs packages, runs the local development server, and builds frontend assets. |
 | Tailwind CSS | Styles screens quickly using project-owned colours and spacing rules. |
 | shadcn/ui | Provides editable building blocks for menus, sheets, forms, and dialogs. |
 | React Flow | Provides the canvas, draggable stars, direct connections, pan, and zoom. |
@@ -55,7 +54,7 @@ The app does not need a backend in the first version. Deployment is a later deci
 
 ## Build order
 
-1. Set up React, Vite, Bun, Tailwind, and the basic app shell.
+1. Set up React with JavaScript/JSX, Bun, Tailwind, and the basic app shell.
 2. Build the star-system canvas with placeholder stars.
 3. Add the local data store and saving.
 4. Add star creation, editing, dragging, and direct connections.

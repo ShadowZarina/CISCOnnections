@@ -1,4 +1,4 @@
-# CISCOnnections design guide
+# Zenith design guide
 
 ## Purpose
 

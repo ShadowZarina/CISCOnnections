@@ -6,3 +6,5 @@
 logs/
 CLAUDE.md
 AGENTS.md
+node_modules/
+dist/

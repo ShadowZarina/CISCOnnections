@@ -1,74 +1,56 @@
-# CISCOnnections
+# Zenith
 
-Inspired by Obsidian's connection webs, CISCOnnections provides an effective way to connect thoughts, bringing together names, categories, and notes through relationships in a 3D graph.
-<br><br>
-Access the website live through [CISCOnnections](link)!
+Zenith is a personal, local-first visual planner for connecting ideas. It uses a space metaphor to help someone organize and explore relationships; it is not a space simulator.
 
-## Features
+```text
+Universe → Galaxy → Star system → Star
+```
 
-CISCOnnections is the perfect tool for visual and writing-based planners who love basking in the wonders of space! Create galaxies for each of your charts, add categories through planets of various colors and shapes, forge stars into existence by listing down names, add your own notes and descriptions as surrounding moons and comets, and connect them all to form your very own constellations!
+Every item is a **Star**. A star can represent a person, task, organization, note, concept, source, or category. Tags and descriptions add meaning without creating separate node types.
 
-✦ Explore the Features of CISCOnnections!
+A **constellation** is the visible connected shape made by stars inside one star system. It is derived from the graph, not saved as a separate folder or object.
 
-- 🌌 Create Your Own Galaxies — Organize each chart into a unique galaxy of ideas.
-- ⭐ Bring Stars to Life — List names and entries as stars in your galaxy.
-- ☄️ Add Notes and Descriptions — Expand your ideas with informative moons and comets.
-- ✨ Connect Your Constellations — Link related entries to visualize connections and relationships.
-- 🎨 Personalize Your Universe — Mix visual elements and written details to create your ideal planner.
+## Product rules
 
-/_ each repository/container is a galaxy<br>
-categories are planets (REMOVE PLANETS, use stars only)<br>
-notes are moons or i can just make them appear on click<br>
-all nodes are stars<br>
-connect stars to form constellations _/
+- A new galaxy starts with one `General` star system.
+- Every star belongs to one star system.
+- A star may connect to many other stars.
+- Connections are unnamed and undirected by default. One pair of stars can have only one connection, and a star cannot connect to itself.
+- Direct connections cannot cross a star-system or galaxy boundary.
+- Stars can share tags across systems, but tags never create connections automatically.
+- The canvas supports adding stars, moving them, connecting them, and removing a selected connection.
 
-## Tech Stack
+## Current canvas prototype
 
-This website utilizes the following languages and frameworks:
+The first prototype opens directly into a seeded `General` system with placeholder stars. It uses in-memory data only, so refreshing resets the graph. The focus is the canvas loop: select a star, activate its Connect control, choose another star, then see the constellation take shape.
 
-- Language: ReactJS
-- Framework: React
-- Build tool: Bun
-- Styling: CSS Modules
-- Canvas: React Flow for connected constellations, or React Konva for a freeform visual workspace
-- Icons: Lucide React
-- State management: React state initially; Zustand when needed
+Visual assets, palettes, typography, final node states, and motion are intentionally deferred while the team confirms the interaction model.
 
-The project maximizes the following concepts:
+## Responsibilities
 
-- Cosine + temporal decay
+| Area | Home | Xiaoha |
+| --- | --- | --- |
+| Product behavior | Owns product rules, scope, hierarchy, and build order | Reviews that proposed behavior remains understandable in the interface |
+| Technical direction | Owns the data model, graph state, connection policy, canvas interactions, and integration decisions | Builds the front-end presentation around the agreed behavior |
+| Connection mechanics | Owns rules for valid links, duplicate prevention, deletion, and derived constellations | Designs the readable node, edge, selection, and feedback states for those rules |
+| Visual system | Supplies technical constraints and placeholder contracts | Owns the visual brief, assets, colors, typography, spacing, motion, and final component treatments |
+| Shared work | Reviews priorities, acceptance checks, and user feedback | Reviews priorities, acceptance checks, and user feedback |
 
-### 1. Recommended frontend stack
+## Planned stack
 
-React
+| Tool | Purpose |
+| --- | --- |
+| React + TypeScript | Application structure and clear graph data shapes |
+| Bun | Package manager, development runtime, and build tooling |
+| Tailwind CSS | CSS foundation once Xiaoha's visual rules are ready |
+| React Flow | Draggable graph canvas, nodes, edges, pan, and zoom |
+| shadcn/ui | Optional source-owned controls for ordinary menus, forms, and panels—not canvas visuals |
+| Lucide React | Action icons where an icon supports a text label |
 
-- Core
-- Build reusable components for galaxies, planets, stars, notes, toolbars, and sidebars. TypeScript helps catch errors as the project grows.
+## Project documents
 
-Bun
-
-- A fast development server and build tool for your React application. It keeps the initial setup simple.
-
-CSS Modules or Tailwind CSS
-
-- Style your space-themed interface, including responsive layouts, colors, typography, shadows, and planet designs. Choose one initially rather than combining both.
-
-React Flow (@xyflow/react)
-
-- Useful for creating connected nodes, draggable objects, and visual relationships. It can provide the foundation for linking stars, planets, and notes.
-
-Lucide React
-
-- Clean, consistent icons for actions such as adding planets, editing stars, deleting notes, zooming, and opening settings.
-
-### Technology Purpose Priority
-
-- HTML5 <br>Structure and semantic elements Essential
-- TypeScript <br>Types for planets, stars, notes, and connections Essential
-- CSS <br>Visual styling and responsive layouts Essential
-- React <br>Router Navigation between pages and galaxies Optional initially
-- Zustand <br>Managing selected objects, editing, and canvas state Useful as complexity grows
-- IndexedDB <br>Saving larger amounts of workspace data locally Later
-- Vitest + React <br>Testing Library Testing components and interactions Later
-
-## How to Run the Website
+- [Product brief](docs/prd/README.md)
+- [Architecture](docs/prd/architecture.md)
+- [Technical features](docs/prd/technical-features.md)
+- [Design guide](docs/prd/design.md)
+- [Canvas connection prototype plan](docs/canvas-prototype/connection-spike-plan.md)

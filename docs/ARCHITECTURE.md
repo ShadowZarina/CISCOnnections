@@ -1,33 +1,36 @@
 # CODE STRUCTURE
 
-ciscOnnections/<br>
+Historical layout below, updated to JavaScript/JSX file extensions. The implemented canvas structure is documented in [canvas-prototype/README.md](canvas-prototype/README.md).
+
+zenith/<br>
 ├── src/<br>
 │   ├── components/<br>
-│   │   ├── GalaxyCanvas.tsx<br>
-│   │   ├── PlanetNode.tsx<br>
-│   │   ├── StarNode.tsx<br>
-│   │   ├── NoteNode.tsx<br>
-│   │   ├── CometNode.tsx<br>
-│   │   ├── ConnectionLine.tsx<br>
-│   │   ├── Toolbar.tsx<br>
-│   │   └── PropertiesPanel.tsx<br>
+│   │   ├── GalaxyCanvas.jsx<br>
+│   │   ├── PlanetNode.jsx<br>
+│   │   ├── StarNode.jsx<br>
+│   │   ├── NoteNode.jsx<br>
+│   │   ├── CometNode.jsx<br>
+│   │   ├── ConnectionLine.jsx<br>
+│   │   ├── Toolbar.jsx<br>
+│   │   └── PropertiesPanel.jsx<br>
 │   ├── pages/<br>
-│   │   ├── Dashboard.tsx<br>
-│   │   └── GalaxyEditor.tsx<br>
-│   ├── types/<br>
-│   │   └── galaxy.ts<br>
+│   │   ├── Dashboard.jsx<br>
+│   │   └── GalaxyEditor.jsx<br>
+│   ├── graph/<br>
+│   │   └── galaxy.js<br>
 │   ├── store/<br>
-│   │   └── galaxyStore.ts<br>
+│   │   └── galaxyStore.js<br>
 │   ├── styles/<br>
-│   ├── App.tsx<br>
-│   └── main.tsx<br>
+│   ├── App.jsx<br>
+│   └── main.jsx<br>
 ├── package.json<br>
 └── index.html<br>
 
 # LANGUAGES & FRAMEWORKS
 
 - Framework: React
-- Build tool: Vite
+- Language: JavaScript / JSX
+- Build tool: Bun
 - Styling: CSS Modules
 - Canvas: React Flow for connected constellations, or React Konva for a freeform visual workspace
 - Icons: Lucide React

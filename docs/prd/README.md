@@ -1,10 +1,10 @@
-# CISCOnnections product brief
+# Zenith product brief
 
 **Status:** Working draft
 
 ## The idea
 
-CISCOnnections is a personal, local-first planner. It helps a person place ideas on a visual canvas and draw the relationships between them.
+Zenith is a personal, local-first planner. It helps a person place ideas on a visual canvas and draw the relationships between them.
 
 It is not an astronomy simulator. The space theme helps people understand the structure of their information.
 

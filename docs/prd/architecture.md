@@ -1,4 +1,4 @@
-# CISCOnnections architecture
+# Zenith architecture
 
 ## Goal
 
