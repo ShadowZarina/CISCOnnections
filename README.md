@@ -1,50 +1,74 @@
 # CISCOnnections
 
-CISCOnnections is a space-themed way to map ideas and their relationships. It is inspired by Obsidian's graph view, but a star can represent almost anything: a person, task, group, source, idea, category, or note.
+Inspired by Obsidian's connection webs, CISCOnnections provides an effective way to connect thoughts, bringing together names, categories, and notes through relationships in a 3D graph.
+<br><br>
+Access the website live through [CISCOnnections](link)!
 
-## How it is organized
+## Features
 
-```text
-Universe
-└── Galaxies
-    └── Star systems
-        └── Stars and their connections
-```
+CISCOnnections is the perfect tool for visual and writing-based planners who love basking in the wonders of space! Create galaxies for each of your charts, add categories through planets of various colors and shapes, forge stars into existence by listing down names, add your own notes and descriptions as surrounding moons and comets, and connect them all to form your very own constellations!
 
-- 🌌 **Universe** — the whole app and all of its galaxies.
-- 🌠 **Galaxy** — one separate workspace, such as “School organizations.”
-- ✨ **Star system** — one smaller area inside a galaxy. Connections stay inside this area.
-- ⭐ **Star** — one item in a star system.
-- 🔗 **Constellation** — the shape made when stars are connected.
+✦ Explore the Features of CISCOnnections!
 
-Tags may be shared across star systems, but a direct connection cannot cross a star-system or galaxy boundary.
+- 🌌 Create Your Own Galaxies — Organize each chart into a unique galaxy of ideas.
+- ⭐ Bring Stars to Life — List names and entries as stars in your galaxy.
+- ☄️ Add Notes and Descriptions — Expand your ideas with informative moons and comets.
+- ✨ Connect Your Constellations — Link related entries to visualize connections and relationships.
+- 🎨 Personalize Your Universe — Mix visual elements and written details to create your ideal planner.
 
-## What the first version will do
+/_ each repository/container is a galaxy<br>
+categories are planets (REMOVE PLANETS, use stars only)<br>
+notes are moons or i can just make them appear on click<br>
+all nodes are stars<br>
+connect stars to form constellations _/
 
-- Create galaxies and star systems.
-- Add stars with a name, description, and tags.
-- Move stars around the canvas.
-- Connect stars in the same star system.
-- Show constellations through those connections.
-- Save the work locally in the browser.
+## Tech Stack
 
-## Tools
+This website utilizes the following languages and frameworks:
 
-- **React + TypeScript** — the app itself.
-- **Vite** — runs the app locally while the team builds it.
-- **Bun** — installs packages and runs project scripts.
-- **Tailwind CSS** — styles the app.
-- **shadcn/ui** — small building blocks for menus, forms, panels, and dialogs.
-- **React Flow** — the star-system canvas, dragging, and connections.
-- **Lucide React** — icons.
+- Language: ReactJS
+- Framework: React
+- Build tool: Bun
+- Styling: CSS Modules
+- Canvas: React Flow for connected constellations, or React Konva for a freeform visual workspace
+- Icons: Lucide React
+- State management: React state initially; Zustand when needed
 
-Deployment is not part of the first version. Vite is for local development and previewing the work.
+The project maximizes the following concepts:
 
-## Project docs
+- Cosine + temporal decay
 
-- [General product brief](docs/prd/README.md)
-- [Architecture](docs/prd/architecture.md)
-- [Technical features](docs/prd/technical-features.md)
-- [Design guide](docs/prd/design.md)
+### 1. Recommended frontend stack
 
-The docs use plain language on purpose. They are the shared source of truth for Home, Xiaoha, and future agents.
+React
+
+- Core
+- Build reusable components for galaxies, planets, stars, notes, toolbars, and sidebars. TypeScript helps catch errors as the project grows.
+
+Bun
+
+- A fast development server and build tool for your React application. It keeps the initial setup simple.
+
+CSS Modules or Tailwind CSS
+
+- Style your space-themed interface, including responsive layouts, colors, typography, shadows, and planet designs. Choose one initially rather than combining both.
+
+React Flow (@xyflow/react)
+
+- Useful for creating connected nodes, draggable objects, and visual relationships. It can provide the foundation for linking stars, planets, and notes.
+
+Lucide React
+
+- Clean, consistent icons for actions such as adding planets, editing stars, deleting notes, zooming, and opening settings.
+
+### Technology Purpose Priority
+
+- HTML5 <br>Structure and semantic elements Essential
+- TypeScript <br>Types for planets, stars, notes, and connections Essential
+- CSS <br>Visual styling and responsive layouts Essential
+- React <br>Router Navigation between pages and galaxies Optional initially
+- Zustand <br>Managing selected objects, editing, and canvas state Useful as complexity grows
+- IndexedDB <br>Saving larger amounts of workspace data locally Later
+- Vitest + React <br>Testing Library Testing components and interactions Later
+
+## How to Run the Website
