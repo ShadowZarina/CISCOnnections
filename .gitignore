@@ -1,0 +1,8 @@
+
+# BALAI: generated Claude Code skills — build artifact of .agent/.
+# Do not hand-edit or commit; rebuild with boot_agent.py.
+.claude/
+.agent/
+logs/
+CLAUDE.md
+AGENTS.md
